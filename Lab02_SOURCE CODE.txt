@@ -1,0 +1,53 @@
+Name	: Mahernaz Akter Mim
+ID 	: 41240102175
+Section : 8B
+Course	: CSE3374
+Lab 	: 02
+
+___________________________________________
+
+Assignment Task :
+___________________________________________
+
+
+class Employee {
+
+    
+    String name;
+    double salary;
+
+    
+    static int employeeCount = 0;
+
+    
+    Employee(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+        employeeCount++;
+    }
+
+    
+    void displayEmployee() {
+        System.out.println("Employee Name: " + name);
+        System.out.println("Salary: " + salary);
+        System.out.println("----------------------");
+    }
+
+    
+    static void displayEmployeeCount() {
+        System.out.println("Total Employees: " + employeeCount);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Employee e1 = new Employee("Mahernaz", 45000);
+        Employee e2 = new Employee("Sara", 20000);
+
+        e1.displayEmployee();
+        e2.displayEmployee();
+
+        Employee.displayEmployeeCount();
+    }
+}

@@ -1,0 +1,193 @@
+/*
+----------------------------------------
+Name    : Mahernaz Akter Mim
+ID      : 41240102175
+Section : 8B
+Course  : CSE3374
+Lab No  : 03
+----------------------------------------
+*/
+
+/*
+Lab Assignment 03
+Topic: Java Object-Oriented Programming Concepts
+*/
+
+// =========================
+// LibraryItem Class
+// =========================
+
+public class LibraryItem {
+
+    private String title;
+    private String author;
+
+    public LibraryItem() {
+        title = "Untitled";
+        author = "Unknown";
+    }
+
+    public LibraryItem(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void displayInfo() {
+        System.out.println("Title : " + title);
+        System.out.println("Author: " + author);
+    }
+}
+
+
+// =========================
+// Book Class
+// =========================
+
+class Book extends LibraryItem {
+
+    private String ISBN;
+    private static int count = 0;
+
+    public Book() {
+        super();
+        ISBN = "0000";
+        count++;
+    }
+
+    public Book(String title, String author, String ISBN) {
+        super(title, author);
+        this.ISBN = ISBN;
+        count++;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("ISBN  : " + ISBN);
+    }
+
+    public static int bookCount() {
+        return count;
+    }
+}
+
+
+// =========================
+// EBook Class
+// =========================
+
+class EBook extends Book {
+
+    private double fileSize;
+
+    public EBook() {
+        super();
+        fileSize = 0.0;
+    }
+
+    public EBook(String title, String author, String ISBN, double fileSize) {
+        super(title, author, ISBN);
+        this.fileSize = fileSize;
+    }
+
+    public double getFileSize() {
+        return fileSize;
+    }
+
+    public void setFileSize(double fileSize) {
+        this.fileSize = fileSize;
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("File Size : " + fileSize + " MB");
+    }
+
+    public void download(String fileName) {
+        System.out.println("Downloading " + fileName);
+    }
+
+    public void download(String fileName, String location) {
+        System.out.println("Downloading " + fileName + " to " + location);
+    }
+}
+
+
+// =========================
+// Main Class
+// =========================
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Creating default objects
+        LibraryItem item1 = new LibraryItem();
+        Book book1 = new Book();
+        EBook ebook1 = new EBook();
+
+        // Creating parameterized objects
+        LibraryItem item2 = new LibraryItem(
+                "Java Programming",
+                "Anisul Islam");
+
+        Book book2 = new Book(
+                "Object Oriented Programming",
+                "Mohammad Nasif Sadique Khan",
+                "CSE3374");
+
+        EBook ebook2 = new EBook(
+                "Database Management",
+                "Anisul Islam",
+                "CSE707",
+                22.5);
+
+        System.out.println("===== Library Item =====");
+        item2.displayInfo();
+
+        System.out.println();
+
+        System.out.println("===== Book =====");
+        book2.displayInfo();
+
+        System.out.println();
+
+        System.out.println("===== EBook =====");
+        ebook2.displayInfo();
+
+        System.out.println();
+
+        System.out.println("===== Download =====");
+        ebook2.download("Database_Management.pdf");
+        ebook2.download("Database_Management.pdf", "C:\\Downloads");
+
+        System.out.println();
+
+        System.out.println("Total Book Objects Created: " + Book.bookCount());
+    }
+}
