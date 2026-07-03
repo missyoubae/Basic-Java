@@ -1,48 +1,26 @@
-# Basic Java ☕
+# Basic Java Lab
 
-A collection of basic Java programs and examples to help beginners learn Java programming fundamentals.
+This repository contains **Java lab questions** along with their **source code solutions**. It is intended to help students understand basic Java programming concepts through practical lab exercises.
 
-## 📚 Topics Covered
+## 📂 Repository Contents
 
-* Variables & Data Types
-* Operators
-* Input & Output
-* Conditional Statements (`if`, `switch`)
-* Loops (`for`, `while`, `do-while`)
-* Methods
-* Arrays
-* Strings
-* Object-Oriented Programming (OOP)
-* Exception Handling
-* Basic Pattern Programs
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-* Java JDK 8 or later
-* Any Java IDE (IntelliJ IDEA, Eclipse, VS Code) or a text editor
-
-### Compile
-
-```bash
-javac Main.java
-```
-
-### Run
-
-```bash
-java Main
-```
+* Lab Questions
+* Java Source Code Solutions
+* Beginner-Friendly Programs
+* Well-Commented Code
+* Practical Java Exercises
 
 ## 🎯 Purpose
 
-This repository is created for beginners who want to learn Java from the basics through simple and easy-to-understand examples.
+The goal of this repository is to provide simple and organized Java lab solutions for learning, practice, and academic reference.
 
-## 🤝 Contributions
+## 🛠️ Requirements
 
-Contributions are welcome! Feel free to fork this repository and submit a pull request.
+* Java JDK 8 or later
+* Any Java IDE (IntelliJ IDEA, Apache NetBeans, Eclipse, VS Code) or a text editor
 
-## 📄 License
+## 📌 Note
 
-This project is licensed under the MIT License.
+The solutions are provided for educational purposes. Try solving each question on your own before referring to the source code.
+
+Happy Coding! ☕
